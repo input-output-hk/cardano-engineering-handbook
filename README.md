@@ -7,3 +7,10 @@
 This is the source repository the [Cardano Engineering Handbook](), a comprehensive resource about the development process of the Cardano core components that form the Cardano network.
 
 The purpose of this handbook is to document the various practices that form the development lifecycle of software within the Cardano community.
+
+
+# Communication channels
+
+* This GH repository
+* #engineering on IOG's slack
+* IOG's Technical Community https://discord.gg/gmCs4z4M discord

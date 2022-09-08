@@ -15,7 +15,9 @@ Target audience:
 ## Policy
 
 * Recommended documents: Contributing, CoC, Security.md....
+* You should write explicitly the build scenarios you are supporting (see CI)
 * Project's roles: Maintainers vs. contributors
+* Platform support
 
 ## Guidelines
 
@@ -28,7 +30,7 @@ Target audience:
 
 ## GHC version policy
 
-> See Existing GHC version policy
+See [GHC Version Policy](./haskell/ghc-version-policy.md)
 
 ## Package Metadata
 
@@ -52,9 +54,16 @@ Examples:
 * Communication about the release
 * There should exist a Changelog
 
+# Platform/OS Support
+
+* Explicitly write down what are the tested platforms
+* Be specific
+
 # CI / Nix / Build Tools / Release Artifacts
 
 > SRE Team needs to be able to consume artifacts
+
+* Your CI should exercise the specific build scenario(s) you are supporting
 
 # Software Licensing
 
