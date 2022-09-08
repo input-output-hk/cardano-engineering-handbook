@@ -1,15 +1,17 @@
 # GHC Version policy
 
-Status: draft
+Status: draft (too IOG-specific)
 Owner: Sylvain Henry
 
 ## Which version of GHC should my project be using?
 
 At any given time there will be a current major version of GHC, and there may be a next major version of GHC.
 
-All IOHK Haskell projects should build with both the current and the next major versions of GHC, unless they are specifically exempted.  New projects should build with the recommended 
+All IOHK Haskell projects should build with both the current and the next major versions of GHC, unless they are specifically exempted. 
+New projects should build with the recommended version.
 
-The choice of minor version is up to the teams, but we encourage teams to move to later minor versions as they are released. In particular, when starting to support a new major version, teams should always use the latest minor version of that major version (unless it is blacklisted, see below).
+The choice of minor version is up to the teams, but we encourage teams to move to later minor versions as they are released. 
+In particular, when starting to support a new major version, teams should always use the latest minor version of that major version (unless it is blacklisted, see below).
 
 ## Are there any versions of GHC that should never be used?
 
@@ -50,7 +52,8 @@ IOHK technical leadership will decide when to adopt new versions of GHC. This de
 
 ## How do we account for upgrade work in project planning?
 
-Following this policy is high-priority engineering work. Please convey this to your product managers, and direct them to talk to the CTO if this is a problem, or if they think you should be exempted.
+Following this policy is high-priority engineering work. 
+Please convey this to your product managers, and direct them to talk to the CTO if this is a problem, or if they think you should be exempted.
 
 ## How do I get an exemption from this policy?
 
@@ -69,3 +72,14 @@ There are no current exemptions.
 | 8.10.(4+) | Stable | Our current preferred version |
 | 9.0.* | Unclear | Not widely deployed, avoid |
 | 9.2.* | Stabilizing | Hopefully will become new preferred version. 9.2.2 looks like a good candidate already. |
+
+## Rationale
+
+Different major versions of GHC can be substantially different.
+In particular, programs may not compile with newer versions of GHC, or may have additional warnings.
+Hence, it make it much harder to integrate projects if they are tested on different major versions of GHC.
+
+That means that everything is much smoother if all the Caradano Haskell projects use the same version of GHC.
+But that also means that when we change the major version, we need to change it for every project relatively synchronously.
+
+Additionally, many versions of GHC have significant problems, particularly on specific platforms like Windows, and it's useful to have a central place to record decisions to avoid.
