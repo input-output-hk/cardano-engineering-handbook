@@ -1,8 +1,6 @@
-# The Cardano Engineering Handbook
+# The Cardano Engineering Handbook - Policies
 
 [Introduction](./introduction.md)
-
-- [Meta](./meta/README.md)
 
 # Generic policy
 
@@ -24,11 +22,10 @@
     - [Package versioning]()
   - [Policies relating to specific libraries](./haskell/specific-library-policies/README.md)
   - [Releases](./haskell/releases/README.md)
-  
+
 <!-- TODO: better title? -->
 # Build, CI and Deployment
 
 - [Requirements to support SRE](./sre/sre-support.md)
 - [Platform support]()
 - [CI](./ci/README.md)
-
