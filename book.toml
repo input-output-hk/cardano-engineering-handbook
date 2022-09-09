@@ -1,5 +1,5 @@
 [book]
-authors = ["Michael Peyton Jones"]
+authors = ["The Cardano Engineering Team"]
 language = "en"
 multilingual = false
 src = "."
