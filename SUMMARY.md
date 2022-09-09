@@ -2,22 +2,11 @@
 
 [Introduction](./introduction.md)
 
+- [Meta](./meta/README.md)
+
 # Generic policy
 
-<!-- You should write explicitly the build scenarios you are supporting (see CI) -->
-<!-- Platform support -->
-
-<!-- Guidelines 
-
-> let's keept that out for the moment?
-
-* Managing contributions
-* Open-source community guidelines
--->
-
 - [Project management](./project/README.md)
-  - [Recommended documents]()
-  - [Roles and responsibilities]()
 - [Software licensing]()
   - [Licenses]()
   - [Copyright assignment]()
@@ -27,7 +16,7 @@
 
 # Language-specific policies
 
-- [Haskell]()
+- [Haskell](./haskell/README.md)
   - [GHC version policy](./haskell/ghc-version-policy.md)
   - [Packaging](./haskell/packaging/README.md)
     - [Package metadata]()
@@ -42,9 +31,4 @@
 - [Requirements to support SRE](./sre/sre-support.md)
 - [Platform support]()
 - [CI](./ci/README.md)
-
-<!--
-* Explicitly write down what are the tested platforms
-* Be specific
--->
 

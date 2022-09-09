@@ -15,11 +15,3 @@ But it is important to have an open location to record this information when we 
 The target audience for this document is everyone working on a project owned by the Cardano Open Source Consortium.
 To avoid confusion, we recommend that if a project is following this Handbook, then it should link back to it in the project README.
 
-## What kinds of document does the Handbook contain?
-
-The majority of the Handbook consists of _policies_.
-These are typically guidelines rather than prescriptions (although there are some which are prescriptive).
-Mostly, we expect contributors to use their judgement in applying the policy, and there is no enforcement mechanism for most of them. 
-
-Policy recommendations can be identified by the use of RFC2119-style keywords. 
-Since most policies are not prescriptive, SHOULD is most common, with occasional use of MUST.

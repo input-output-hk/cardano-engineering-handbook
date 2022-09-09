@@ -5,25 +5,26 @@ Owner: Sylvain Henry
 
 ## Which version of GHC should my project be using?
 
-At any given time there will be a current major version of GHC, and there may be a next major version of GHC.
+At any given time there will be a current major version of GHC, and there may be a next major version of GHC, recorded in this document.
 
-All IOHK Haskell projects should build with both the current and the next major versions of GHC, unless they are specifically exempted. 
-New projects should build with the recommended version.
+All Haskell projects SHOULD build with both the current and the next major versions of GHC.
+New projects should build with the current version.
 
-The choice of minor version is up to the teams, but we encourage teams to move to later minor versions as they are released. 
-In particular, when starting to support a new major version, teams should always use the latest minor version of that major version (unless it is blacklisted, see below).
+The choice of minor version is less important, but in general projects SHOULD move to later minor versions as they are released. 
+In particular, when adding support for a new major version, projects should always use the latest minor version of that major version (unless it is blacklisted, see below).
 
 ## Are there any versions of GHC that should never be used?
 
-Some versions of GHC are known to be broken in a critical way and should never be used. This may mean that teams need to stay on an older minor version if the newer ones are blacklisted.
+Some versions of GHC are known to be broken in a critical way and SHOULD NOT be used. 
+This may mean that projectes need to stay on an older minor version if the newer ones are blacklisted.
 
 ## What is the current major version of GHC?
 
-8.10
+8.10.
 
 ## What is the next major version of GHC?
 
-There is no next major version at the moment.
+The next major version of GHC is 9.2.
 
 ## Which versions of GHC are blacklisted?
 
@@ -41,7 +42,8 @@ The process is:
 
 ## How does the next major version change?
 
-IOHK technical leadership will decide when to adopt new versions of GHC. This decision may be made on the basis of:
+Cardano technical leadership will decide when to adopt new versions of GHC. 
+This decision may be made on the basis of:
 
 - Maturity of the release
 - Bugs which block upgrading
@@ -50,28 +52,13 @@ IOHK technical leadership will decide when to adopt new versions of GHC. This de
 - Whether essential libraries have been upgraded to the new version
 - Whether our custom tooling (e.g. GHCJS) is updated to work with it
 
-## How do we account for upgrade work in project planning?
-
-Following this policy is high-priority engineering work. 
-Please convey this to your product managers, and direct them to talk to the CTO if this is a problem, or if they think you should be exempted.
-
-## How do I get an exemption from this policy?
-
-Ideally all projects would follow this policy, however exemptions will be considered on a case-by-case basis. 
-
-Projects which are standalone and not dependencies/dependents of other projects are more likely to be exempted.
-
-### List of current exemptions
-
-There are no current exemptions.
-
 ## GHC version confidence status
 
 | Version | Status | Comments |
 | -- | -- | -- |
-| 8.10.(4+) | Stable | Our current preferred version |
+| 8.10.(4+) | Stable | Current preferred version |
 | 9.0.* | Unclear | Not widely deployed, avoid |
-| 9.2.* | Stabilizing | Hopefully will become new preferred version. 9.2.2 looks like a good candidate already. |
+| 9.2.(4+) | Stable | Next preferred version. |
 
 ## Rationale
 
