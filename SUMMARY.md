@@ -15,7 +15,7 @@
 * Open-source community guidelines
 -->
 
-- [Project management]()
+- [Project management](./project/README.md)
   - [Recommended documents]()
   - [Roles and responsibilities]()
 - [Software licensing]()
