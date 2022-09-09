@@ -1,7 +1,6 @@
 # GHC Version policy
 
-Status: draft (too IOG-specific)
-Owner: Sylvain Henry
+This policy explains which versions of GHC should be used in a project.
 
 ## Which version of GHC should my project be using?
 

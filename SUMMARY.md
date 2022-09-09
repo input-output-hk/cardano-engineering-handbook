@@ -7,8 +7,8 @@
 # Generic policy
 
 - [Project management](./project/README.md)
-- [Software licensing]()
-  - [Licenses]()
+- [Legal](./legal/README.md)
+  - [Licenses](./legal/licenses.md)
   - [Copyright assignment]()
 - [Security](./security/README.md)
   - [Audit requirements]()
