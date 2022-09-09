@@ -1,4 +1,9 @@
+# mdbook output folder
 book
 
+# direnv
 .direnv
 .envrc
+
+# nix
+result

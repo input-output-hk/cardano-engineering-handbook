@@ -8,6 +8,10 @@ This is the source repository the [Cardano Engineering Handbook](), a comprehens
 
 The purpose of this handbook is to document the various practices that form the development lifecycle of software within the Cardano community.
 
+# Building the book
+
+The book can be built with the `mdbook` exectuable. 
+If you use Nix, you can get a shell with `mdbook` using `nix develop`.
 
 # Communication channels
 
