@@ -1,0 +1,6 @@
+[book]
+authors = ["Michael Peyton Jones"]
+language = "en"
+multilingual = false
+src = "."
+title = "Cardano Engineering Handbook"
