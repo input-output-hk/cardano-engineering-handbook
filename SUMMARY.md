@@ -29,7 +29,7 @@
 
 - [Haskell]()
   - [GHC version policy](./haskell/ghc-version-policy.md)
-  - [Packaging]()
+  - [Packaging](./haskell/packaging/README.md)
     - [Package metadata]()
     - [Package management]()
     - [Package versioning]()
@@ -41,8 +41,7 @@
 
 - [Requirements to support SRE](./sre/sre-support.md)
 - [Platform support]()
-- [CI]()
-  - [Platform support in CI](./ci/platforms.md)
+- [CI](./ci/README.md)
 
 <!--
 * Explicitly write down what are the tested platforms
