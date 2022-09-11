@@ -4,14 +4,14 @@
 
 A project SHOULD contain the following documents:
 - README
-- CONTRIBUTING 
-- SECURITY 
+- CONTRIBUTING
+- SECURITY
 - CODE_OF_CONDUCT
 - CHANGELOG (if the project includes multiple packages or similar, then one CHANGELOG per package may be appropriate)
 
 The documents SHOULD be easily accessible and discoverable, ideally by being put in standard locations.
 
-The content of these documents is largely up to the project contributors. 
+The content of these documents is largely up to the project contributors.
 The most important thing is that they exist, we believe that if they exist, people will mostly want to make them good.
 
 In the following, when we say that a document should include information, this can either mean it includes it directly, or that it clearly links to where it can be found.
@@ -26,12 +26,12 @@ A CONTRIBUTING document SHOULD include the following information:
 
 A SECURITY document MUST provide security@iohk.io as the contact email for security issues.
 
-TODO: this should become a non-IOHK email address in due course.
+TODO: this should become a non-IOG email address in due course.
 
 ## Roles and responsibilities
 
 A project SHOULD have a clear maintainer and backup maintainer.
-The project documentation SHOULD clearly indicate these and any other roles and responsibilities in the project. 
+The project documentation SHOULD clearly indicate these and any other roles and responsibilities in the project.
 
 Having clear roles and responsibilities is very useful for contributors.
 It is particularly important to be able to identify who has the right to merge PRs, and who holds ultimate technical authority over the project.
