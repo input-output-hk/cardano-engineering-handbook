@@ -2,7 +2,7 @@
 
 :construction:
 
-This is the source repository for the [Cardano Engineering Handbook](), a comprehensive resource about the development process of the Cardano core components that form the Cardano network, developed under the umbrella of the Cardano Open Source Consortium (COSC).
+This is the source repository for the [Cardano Engineering Handbook](https://input-output-hk.github.io/cardano-engineering-handbook/), a comprehensive resource about the development process of the Cardano core components that form the Cardano network, developed under the umbrella of the Cardano Open Source Consortium (COSC).
 
 ## History
 

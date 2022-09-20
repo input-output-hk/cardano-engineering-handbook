@@ -10,9 +10,7 @@ these communication channels to reach the handbook team:
 * GitHub tools, mainly [Issues](https://github.com/input-output-hk/cardano-engineering-handbook/issues) and [Discussions](https://github.com/input-output-hk/cardano-engineering-handbook/discussions)
 * `#engineering` channel on IOG's slack
 
-## How to Contribute to this Handbook?
-
-### Policies Acceptance Process
+## Policies Acceptance Process
 
 * If you want to propose a new policy:
   * Do a PR changing the policy
@@ -22,7 +20,7 @@ these communication channels to reach the handbook team:
   * Exceptionally, the benevolent dictator(s) of the repository can step in to accept a propsal when there is a wide majority for acceptance and a tiny minority for rejection -> eg. we don't want good proposals to be blocked by the whims or opinions of 1 person
 * This process should take a reasonable amount of time
 
-### Policies Content
+## Policies Content
 
 Handbook policies are typically guidelines rather than prescriptions (although some might be prescriptive).
 We expect each project under the umbrella of Cardano Open Source Consortium to use their judgement in applying policies, and there is no enforcement mechanism for most of them.
