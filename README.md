@@ -1,25 +1,13 @@
-# The Cardano Engineeering Handbook
+# The Cardano Engineering Handbook
 
 :construction:
 
-This is the source repository for the [Cardano Engineering Handbook](https://input-output-hk.github.io/cardano-engineering-handbook/), a comprehensive resource about the development process of the Cardano core components that form the Cardano network, developed under the umbrella of the Cardano Open Source Consortium (COSC).
+This is the source repository for the [Cardano Engineering Handbook](https://input-output-hk.github.io/cardano-engineering-handbook/), which contains _cross-project_ policies and information that relate to all the projects in the Cardano Open Source Consortium.
 
 ## History
 
-In September 2022, right before the Vasil hard fork, _Input Output Global_ held a workshop in Lisbon with the Core engineering team in order to reflect on the development process and identify concrete actions that could undertaken in order to improve this process and its outcome, namely the cardano-node.
-This handbook is one of the many actions that were initiated during that workshop, part of the overall initiative to turn Cardano into a truly Open Source project, eg. one that's maintained by an active community of teams and individuals and not by a single company.
-
-## Purpose
-
-The purpose of this handbook is both descriptive and prescriptive:
-
-* On the one hand, it aims at _prescribing_ mandatory or optional processes, tools, practices, or artifacts that _any_ software project that's part of the COSC must or should follow in order to be a good citizen within the eco-system,
-* On the other hand it aspires at _describing_ practices, processes, tools, or techniques encompassing the whole software development lifecycle that are used across the various projects, in order to provide a consistent _developer experience_ and make tacit knowledge explicit.
-
-As such, it is composed of two parts:
-
-* Part I, is about _policies_,
-* Part II, is about _practices_.
+In September 2022, right before the Vasil hard fork, _Input Output Global_ held a workshop in Lisbon with the Core engineering team in order to reflect on the development process of Cardano and identify areas for improvement, especially in the light of the increasing move towards open development.
+This handbook is one of the initiatives that came out of that workshop, since in order to truly have open development we need a place to record and discuss cross-project engineering matters which is open to _all_ contributors to the project.
 
 # Building the book
 

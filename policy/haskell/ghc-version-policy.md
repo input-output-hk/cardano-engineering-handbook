@@ -1,5 +1,7 @@
 # GHC Version policy
 
+- TODO: Decision-makers are unclear, who is "Cardano technical leadership"?
+
 This policy explains which versions of GHC should be used in a project.
 
 ## Which version of GHC should my project be using?
