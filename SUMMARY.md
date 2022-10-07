@@ -12,6 +12,7 @@
 - [Haskell](./policy/haskell/README.md)
   - [GHC version policy](./policy/haskell/ghc-version-policy.md)
   - [Packaging](./policy/haskell/packaging/README.md)
+    - [Distribution](./policy/haskell/packaging/distribution.md)
   - [Policies relating to specific libraries](./policy/haskell/specific-library-policies/README.md)
   - [Releases](./policy/haskell/releases/README.md)
 <!-- TODO: better title? -->
