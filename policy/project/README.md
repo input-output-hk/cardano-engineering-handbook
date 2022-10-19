@@ -28,6 +28,10 @@ A `CONTRIBUTING` document SHOULD include the following information:
 
 A `SECURITY` document MUST provide security@iohk.io as the contact email for security issues.
 
+### CODE OF CONDUCT
+
+Individual projects SHOULD link to the default Code of Conduct in this repository: https://github.com/input-output-hk/cardano-engineering-handbook/blob/main/CODE-OF-CONDUCT.md
+
 ## Roles and responsibilities
 
 A project SHOULD have a clear maintainer and backup maintainer.
