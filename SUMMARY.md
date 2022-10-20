@@ -9,6 +9,7 @@
   - [Legal](./policy/legal/README.md)
     - [Licenses](./policy/legal/licenses.md)
   - [Security](./policy/security/README.md)
+    - [Audits](./policy/security/audits.md)
 - [Haskell](./policy/haskell/README.md)
   - [GHC version policy](./policy/haskell/ghc-version-policy.md)
   - [Packaging](./policy/haskell/packaging/README.md)
@@ -27,3 +28,4 @@
     - [Testing](./practices/haskell/testing.md)
     - [Code formatting](./practices/haskell/code-formatting.md)
     - [Coding style](./practices/haskell/coding-style.md)
+- [Project management](./practices/project/README.md)

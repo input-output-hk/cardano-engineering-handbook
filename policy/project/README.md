@@ -24,6 +24,8 @@ A `CONTRIBUTING` document SHOULD include the following information:
 - [Roles and responsibilities](#roles-and-responsibilities) for the project.
 - The fact that the project follows this Handbook.
 
+See [the practices section](../../practices/project/index.html) for a broader discussion of what things are good to include in contributing documentation.
+
 ### SECURITY
 
 A `SECURITY` document MUST provide security@iohk.io as the contact email for security issues.
