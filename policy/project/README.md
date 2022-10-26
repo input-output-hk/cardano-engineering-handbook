@@ -30,7 +30,7 @@ A `SECURITY` document MUST provide security@iohk.io as the contact email for sec
 
 ### CODE OF CONDUCT
 
-Individual projects SHOULD link to the default Code of Conduct in this repository: https://github.com/input-output-hk/cardano-engineering-handbook/blob/main/CODE-OF-CONDUCT.md
+Individual projects SHOULD use the [default Code of Conduct in this repository](https://github.com/input-output-hk/cardano-engineering-handbook/blob/main/CODE-OF-CONDUCT.md), either by copying it or linking to it.
 
 ## Roles and responsibilities
 
