@@ -21,11 +21,15 @@ This had all the problems discussed below, but also meant that downstream projec
 ## Distribution via Hackage
 
 A Cardano package which:
-1. Is stable (unlikely to be significantly re-worked, renamed, etc.)
-2. Has broad value to the community (would any non-Cardano package actually use it?)
+1. Is stable
+    - Vague, but implies that it is unlikely to be significantly re-worked, renamed, etc.
+2. Has broad value to the community 
+    - A test question is: would any non-Cardano package actually use it?
 3. Has clear maintainership, ideally including individuals from multiple organizations
 4. Reaches a high standard of documentation, testing, and open-source infrastructure
-5. Is in full compliance with all [legal](../../legal/index.html) policies.
+   - In particular, it should have high-quality examples of all the [recommended documents](../../project/README.html)
+5. Is in full compliance with all [legal](../../legal/index.html) policies
+6. Is developed in its own, standalone repository
 
 MAY be released to Hackage.
 The process for doing this is the normal process for releasing to Hackage.
@@ -38,6 +42,7 @@ The Hackage user [iogospo](https://hackage.haskell.org/user/iogospo) MUST be inc
 
 Publishing to Hackage is desirable because it makes it easier for the wider community to benefit from our work.
 We should do this, but only when we think they actually will benefit: when we have a stable, high-quality, useful packge to contribute.
+Much of the list of criteria is designed to make the package look like a "normal" open-source Haskell package repository (of high quality).
 
 ## Use of `source-repository-package`s
 
