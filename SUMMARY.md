@@ -6,7 +6,6 @@
 
 - [Project management](./policy/project/README.md)
 - [Legal](./policy/legal/README.md)
-  - [Licenses](./policy/legal/licenses.md)
 - [Security](./policy/security/README.md)
   - [Audits](./policy/security/audits.md)
 <!-- TODO: better title? -->
