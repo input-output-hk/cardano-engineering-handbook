@@ -45,3 +45,5 @@ The following are explicitly _not_ goals of the Handbook:
 The Handbook is very new and will gradually acquire more content over time.
 The other major issue is that many policies have been adapted from IOG policies, and are therefore IOG-specific in a way that is inappropriate for the COSC as a whole.
 We hope to improve all of this over time!
+
+Please consult the [issue tracker](https://github.com/input-output-hk/cardano-engineering-handbook/issues) to see what we're working on, and feel free to open issues for any additional problems.

@@ -1,8 +1,5 @@
 # Testing
 
-- TODO: make the examples more specific
-- TODO: link to a talk about property-based testing?
-
 This describes various testing practices which are in use in the Cardano project, along with examples for reference and links to commonly used libraries.
 
 ## Unit testing
