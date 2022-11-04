@@ -1,7 +1,5 @@
 # Project management
 
-- TODO: security contact address is IOHK-specific
-
 ## Recommended documents
 
 A project SHOULD contain the following documents:

@@ -1,7 +1,5 @@
 # Distributing Haskell packages
 
-TODO: the backup Hackage user is too IOG-specific.
-
 ## Distribution via CHaP
 
 Cardano packages which are not [released to Hackage](#distribution-via-hackage) MUST be released to [Cardano Haskell Packages (CHaP)](https://github.com/input-output-hk/cardano-haskell-packages) as part of their release process.

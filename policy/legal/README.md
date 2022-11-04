@@ -1,7 +1,5 @@
 # Legal
 
-- TODO: explain how to use the Creative Commons license
-
 This section contains policies relating to legal matters.
 
 ## Licenses
