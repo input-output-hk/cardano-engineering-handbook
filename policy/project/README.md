@@ -46,12 +46,44 @@ Individual projects SHOULD use the [default Code of Conduct in this repository](
 
 ## Roles and responsibilities
 
-A project SHOULD have a clear maintainer and backup maintainer.
-The project documentation SHOULD clearly indicate these and any other roles and responsibilities in the project. 
-For example, it may be useful to identify anyone who has the ability to help with CI issues, or to interact with other project-specific resources.
+A project SHOULD clearly identify any people who perform key functional roles as appropriate for the project.
+For example, most projects will have people in the following functional roles:
+- People who can merge PRs
+- People who can review PRs
+- People who can adjudicate technical (or other) disputes
+- People who can release the software
+- People who can resolve issues with CI
+
+A project MAY identify some individual or individuals as the "maintainers".
+The meaning of this is not specified, as it is a common term in usage throughout the open-source world with various meanings, but it typically indicates that they are a "default" holder of functional roles.
+
+A project SHOULD also ensure that key functional roles have succession plans.
+In the simplest case this can just consist of ensuring that multiple maintainers are listed or that a backup maintainer is listed.
+
+### Examples
+
+Projects can present this information however makes sense for them.
+For example, the following would be a good presentation of this information for a moderately complex project:
+
+> The key maintainer for this project is Alice, who has final technical authority and handles releases.
+> The exception is component C where Bob is the authority.
+> Bob is also the backup maintainer in case Alice becomes unavailable.
+> 
+> The rest of the regular contributors are Dave, Edna, and Fahran, all of whom can merge PRs and be asked to review them.
+> In addition, the CODEOWNERS file identifies specific reviewers who are required for PRs that affect specific components.
+> 
+> The CI runs on Github Actions, so any contributor with write permissions can restart workflows.
+> Edna wrote the workflow specifications, so is the best person to help with problems, otherwise ask Dave.
+
+For a small project it would also be sufficient to write this:
+
+> This project is maintained by Gareth.
+> Hannah is the backup maintainer.
+
+### Rationale
 
 Having clear roles and responsibilities is very useful for contributors.
-It is particularly important to be able to identify who has the right to merge PRs, and who holds ultimate technical authority over the project.
+As they progress through the contribution workflow, it is important that they be able to identify people who can help them when they hit typical roadblocks, such as getting code reviews, merging PRs or adjudicating technical disputes.
 
-It's also important for the health of a project that there _is_ a nominated maintainer, and a backup so that if the maintainer stops being able to fill that role there is someone engaged who can step up.
-Otherwise it can be the case that there is no maintainer, and nobody even notices!
+It's also important for the health of a project that there _are_ some nominated people who do things, and backups so that if those people stop filling their roles there is someone engaged who can step up.
+Otherwise it can be the case that nobody is maintaining a project, and nobody even notices!
