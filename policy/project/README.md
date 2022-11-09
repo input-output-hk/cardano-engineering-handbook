@@ -1,5 +1,17 @@
 # Project management
 
+## Subscribing to the Cardano Engineering Handbook
+
+A project SHOULD explicitly indicate that they follow the Cardano Engineering Handbook in their README.
+Projects MAY do this by using a badge.
+
+Consult [`shields.io`](https://shields.io/) for more information about how to embed this badge in your README.
+- Base badge URL: `https://img.shields.io/badge/policy-Cardano%20Engineering%20Handbook-informational`
+- Badge URL with link: `https://img.shields.io/badge/policy-Cardano%20Engineering%20Handbook-informational?link=https://input-output-hk.github.io/cardano-engineering-handbook`
+- Markdown fragment: `[![handbook](https://img.shields.io/badge/policy-Cardano%20Engineering%20Handbook-informational)](https://input-output-hk.github.io/cardano-engineering-handbook)`
+
+Projects which subscribe to the Cardano Engineering Handbook SHOULD track any deviations from policy in some appropriate public location, such as their issue tracker.
+
 ## Recommended documents
 
 A project SHOULD contain the following documents:

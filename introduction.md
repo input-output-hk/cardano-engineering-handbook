@@ -1,7 +1,7 @@
 # Introduction
 
 This document forms the Cardano Engineering Handbook, which aims to provide documentation and policy that applies to all projects in the Cardano Open Source Consortium (COSC).
-To avoid confusion, we recommend that if a project is following this Handbook, then it should link to the Handbook in its `README`.
+To avoid confusion, projects should [explicitly subscribe](policy/project/index.html) to the Handbook. 
 
 The target audience for the Handbook is everyone working on a project owned by the COSC.
 This is also the set of target contributors for the Handbook!
