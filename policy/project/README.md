@@ -46,13 +46,16 @@ Individual projects SHOULD use the [default Code of Conduct in this repository](
 
 ## Roles and responsibilities
 
-A project SHOULD clearly identify any people who perform key functional roles as appropriate for the project.
+A project SHOULD clearly identify any people who perform key functional roles.
 For example, most projects will have people in the following functional roles:
 - People who can merge PRs
-- People who can review PRs
+- People who can do any code review that the project requires
 - People who can adjudicate technical (or other) disputes
 - People who can release the software
 - People who can resolve issues with CI
+
+This is not an exhaustive list! 
+Projects should list the roles that make sense for them.
 
 A project MAY identify some individual or individuals as the "maintainers".
 The meaning of this is not specified, as it is a common term in usage throughout the open-source world with various meanings, but it typically indicates that they are a "default" holder of functional roles.
@@ -63,7 +66,7 @@ In the simplest case this can just consist of ensuring that multiple maintainers
 ### Examples
 
 Projects can present this information however makes sense for them.
-For example, the following would be a good presentation of this information for a moderately complex project:
+For example, the following would be an acceptable presentation of this information for a moderately complex project:
 
 > The key maintainer for this project is Alice, who has final technical authority and handles releases.
 > The exception is component C where Bob is the authority.
@@ -85,5 +88,18 @@ For a small project it would also be sufficient to write this:
 Having clear roles and responsibilities is very useful for contributors.
 As they progress through the contribution workflow, it is important that they be able to identify people who can help them when they hit typical roadblocks, such as getting code reviews, merging PRs or adjudicating technical disputes.
 
-It's also important for the health of a project that there _are_ some nominated people who do things, and backups so that if those people stop filling their roles there is someone engaged who can step up.
+It's also important for the health of a project that for important roles there is some kind of plan for what to do in case the people who currently occupy them stop being able to do so.
 Otherwise it can be the case that nobody is maintaining a project, and nobody even notices!
+
+However, most of the details are project-specific. 
+Exactly what roles make sense; who performs them; whether or not that descends from them having some other official role or not; what kind of backup plans make sense; all of these things can vary. 
+For example, all of the following are reasonable project organization structures that we do not want to preclude:
+- A small group of co-maintainers who do everything.
+- A larger but very egalitarian team that attempts to share all responsibilities equally.
+- A very formalised team with explicit team roles and leadership positions.
+- A project which has multiple sub-components which have very different organization structures (e.g. a big project with a formal methods component that has a single maintainer)
+
+The main goals are just for projects to:
+1. Identify the state of their roles and responsibilities explicitly, rather than relying on people just picking it up; and
+2. Make some effort to ensure that key roles don't go unfilled.
+
