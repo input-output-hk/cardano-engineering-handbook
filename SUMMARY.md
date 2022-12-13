@@ -5,7 +5,8 @@
 # Policies
 
 - [Project management](./policy/project/README.md)
-- [Legal](./policy/legal/README.md)
+<!-- draft until reviewed -->
+- [Legal]() <!--(./policy/legal/README.md)-->
 - [Build, CI and Deployment](./policy/build.md)
   - [Platform support](./policy/platforms.md)
   - [CI](./policy/ci/README.md)
