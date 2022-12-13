@@ -1,7 +1,5 @@
 # The Cardano Engineering Handbook
 
-:construction:
-
 This is the source repository for the [Cardano Engineering Handbook](https://input-output-hk.github.io/cardano-engineering-handbook/), which contains _cross-project_ policies and information that relate to all the projects in the Cardano Open Source Consortium.
 
 ## History

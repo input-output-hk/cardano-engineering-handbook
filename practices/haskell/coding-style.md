@@ -7,3 +7,4 @@ There aren't many examples of public Haskell style guides, but several Cadano te
 - [`plutus`](https://github.com/input-output-hk/plutus/blob/master/STYLEGUIDE.adoc)
 - [Adrestia](https://input-output-hk.github.io/adrestia/code)
 - [`hydra`](https://github.com/input-output-hk/hydra-poc/wiki/Coding-Standards)
+- [Consensus team in `ouroboros-network`](https://github.com/input-output-hk/ouroboros-network/blob/master/ouroboros-consensus/docs/StyleGuide.md)
