@@ -29,16 +29,26 @@ A package MUST pin the major version of any Cardano package that it depends on.
 A set of packages defined in the same source repository MUST include version bounds which are as tight as necessary to ensure that they function correctly when distributed via a package repository.
 Typically this will mean pinning the major version.
 
+**Implied bounds**
+
+A component MAY omit bounds that it is otherwise required to have if those bounds are implied by other dependencies that the package has within the same repository.
+
 ### Examples
+
+**Using version bounds**
 
 Package P contains a test suite and also an executable that is used to inspect binary blobs that can be produced by using P.
 The test suite is not intended to be used downstream, but the executable is, since it can be helpful for users to diagnose the products of P.
 Hence the test suite does not need bounds, but the executable does.
 
+**Discovering an incompatible version**
+
 The developer of package P, which depends on library L, tries to build with `L-N`. 
 This fails, so the developer either:
 1. Adds an upper bound of `L < N`, since `L-N` is known not to work; or
 2. Fixes P to work with `L-N`, and if this means that P will now no longer work with earlier versions of L, adds a lower bound of `L >= N`.
+
+**Discovering an incompatible version for an upstream dependency**
 
 The developer of package Q, which depends on `P-M`, tries to build with `L-N`.
 This fails when building P, so the developer of Q notifies the developer of P. 
@@ -46,28 +56,53 @@ The developer of P then:
 1. Revises `P-M` to have a bound of `L < N`; and 
 2. Adds a bound of `L < N` to the development branch of P if it still applies.
 
+**Setting version bounds within a repository**
+
 Packages P and Q are defined in the same source repository, and P depends on Q. 
 Package P is at version 1.1.2, package Q is at version 2.4.3, and they both follow the PVP.
 Then P should bound its dependency on Q to `Q == 2.4.*`
 
+**Omitting implied bounds**
+
+Package P has both a library component and an executable component, both of which are used downstream.
+Both components depend on `L-N`, and do not work with `L-N+1**, and the executable depends on the library.
+In this case it is acceptable to only put the bound on the library.
+
+
 ### Rationale
 
-Excluding dependency versions which are *known* not to work is a cheap way to convey information to downstream users.
-It means that if they try to use the non-working version then they will get a solver error from cabal, instead of a compilation error.
-It is common to discover this kind of version incompatibility information during development, and so this policy primarily insists that such information be recorded mechanically so that other people benefit from it.
+**Scope**
 
 Non-library components are much less critical, because they cannot be depended upon, and it is rarer that someone will want to e.g. run the tests or benchmarks for an upstream package.
 However, it can still be the case that this happens, especially for executables, which are sometimes explicitly intended to be used by downstream users.
 For this reason we tie the choice over whether to include bounds to the decision of the maintainer over whether the component is intended to be used downstream.
 
+**Known-bad bounds**
+
+Excluding dependency versions which are *known** not to work is a cheap way to convey information to downstream users.
+It means that if they try to use the non-working version then they will get a solver error from cabal, instead of a compilation error.
+It is common to discover this kind of version incompatibility information during development, and so this policy primarily insists that such information be recorded mechanically so that other people benefit from it.
+
+**Speculative upper bounds**
+
 Speculative upper bounds are controversial.
 They have advantages (ensure that users get a working (if old) build plan; robustness against future changes), and disadvantages (often overly cautious; require large amounts of bound-relaxing to allow even "safe" new major versions).
 There is no consensus amongst the Cardano engineering community about which is preferable, so we simply note that either approach is acceptable.
 
+**Cardano dependencies**
+
 Cardano packages themselves typically both a) make frequent breaking changes and b) have important behavioural differences between major versions.
 For this reason we recommend that projects explicitly pin the major version of any Cardano packages that they depend on.
+
+**Intra-repository dependencies**
 
 Within a single source repository, packages are usually built with all the packages taken from a single commit of the source repository.
 When the packages are built from a package repository, then cabal may try to build them with _different_ versions, so long as the bounds are satisfied.
 For this reason it is important to have tight enough bounds on packages which are defined in the same source repository.
 Typically it should be enough to pin the major version.
+
+**Implied bounds**
+
+It is common to have a repository which has many components/packages depending on some other package P.
+It is tedious to require _every_ use of P to be well-bounded, especially since the components/packages in a repository should have tight bounds on each other, such that in practice bounding a single use of P should be enough to fix it for every package in the repository.
+Some care should be taken, however: it is easy to _think_ that all packages in the repository are constrained, when in fact there may be a few that don't depend on the one that bounds P.
