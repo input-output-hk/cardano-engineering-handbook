@@ -22,3 +22,4 @@
     - [Testing](./practices/haskell/testing.md)
     - [Code formatting](./practices/haskell/code-formatting.md)
     - [Coding style](./practices/haskell/coding-style.md)
+- [CI](./practices/ci/README.md)
