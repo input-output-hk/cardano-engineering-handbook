@@ -13,12 +13,12 @@ Non-library components of such packages MUST also do so if it is anticipated tha
 
 **Known-bad bounds**
 
-Version bounds (both upper and lower) MUST be included when they exclude versions of dependencies that the package is know not to work with.
+Version bounds (both upper and lower) MUST be included when they exclude versions of dependencies that the package is known not to work with.
 In addition, if it is discovered that a version of a dependency does not work with a version of the package that has been released to a package repository, then the package maintainer SHOULD revise the released version to include the new bound.
 
 **Speculative upper bounds**
 
-A package MAY include an upper bound that excludes the next major version of a dependency, even if it is not known that the next major version will the package (e.g. because it has not been released yet).
+A package MAY include an upper bound that excludes the next major version of a dependency, even if it is not known whether the next major version will break the package (e.g. because it has not been released yet).
 
 **Cardano dependencies**
 
@@ -37,37 +37,36 @@ A component MAY omit bounds that it is otherwise required to have if those bound
 
 **Using version bounds**
 
-Package P contains a test suite and also an executable that is used to inspect binary blobs that can be produced by using P.
-The test suite is not intended to be used downstream, but the executable is, since it can be helpful for users to diagnose the products of P.
+Package `pkg-a` contains a test suite and also an executable that is used to inspect binary blobs that can be produced by using `pkg-a`.
+The test suite is not intended to be used downstream, but the executable is, since it can be helpful for users to diagnose the products of `pkg-a`.
 Hence the test suite does not need bounds, but the executable does.
 
 **Discovering an incompatible version**
 
-The developer of package P, which depends on library L, tries to build with `L-N`. 
+The developer of package `pkg-a`, which depends on library `pkg-b`, tries to build with `pkg-b-N`. 
 This fails, so the developer either:
-1. Adds an upper bound of `L < N`, since `L-N` is known not to work; or
-2. Fixes P to work with `L-N`, and if this means that P will now no longer work with earlier versions of L, adds a lower bound of `L >= N`.
+1. Adds an upper bound of `pkg-b < N`, since `pkg-b-N` is known not to work; or
+2. Fixes `pkg-a` to work with `pkg-b-N`, and if this means that `pkg-a` will now no longer work with earlier versions of `pkg-b`, adds a lower bound of `pkg-b >= N`.
 
 **Discovering an incompatible version for an upstream dependency**
 
-The developer of package Q, which depends on `P-M`, tries to build with `L-N`.
-This fails when building P, so the developer of Q notifies the developer of P. 
-The developer of P then:
-1. Revises `P-M` to have a bound of `L < N`; and 
-2. Adds a bound of `L < N` to the development branch of P if it still applies.
+The developer of package `pkg-c`, which depends on `pkg-a-M`, tries to build with `pkg-b-N`.
+This fails when building `pkg-a`, so the developer of `pkg-c` notifies the developer of `pkg-a`. 
+The developer of `pkg-a` then:
+1. Revises `pkg-a-M` to have a bound of `pkg-b < N`; and 
+2. Adds a bound of `pkg-b < N` to the development branch of `pkg-a` if it still applies.
 
 **Setting version bounds within a repository**
 
-Packages P and Q are defined in the same source repository, and P depends on Q. 
-Package P is at version 1.1.2, package Q is at version 2.4.3, and they both follow the PVP.
-Then P should bound its dependency on Q to `Q == 2.4.*`
+Packages `pkg-a` and `pkg-b` are defined in the same source repository, and `pkg-a` depends on `pkg-b`. 
+`pkg-a` is at version 1.1.2, `pkg-` is at version 2.4.3, and they both follow the PVP.
+Then `pkg-a` should bound its dependency on `pkg-b` to `pkg-b == 2.4.*`
 
 **Omitting implied bounds**
 
-Package P has both a library component and an executable component, both of which are used downstream.
-Both components depend on `L-N`, and do not work with `L-N+1**, and the executable depends on the library.
-In this case it is acceptable to only put the bound on the library.
-
+Package `pkg-a` has both a library component and an executable component, both of which are used downstream.
+Both components depend on `pkg-b-N`, and do not work with `pkg-b-(N+1)`, and the executable depends on the library.
+In this case it is acceptable to only put a `pkg-b < N+1` bound on the library.
 
 ### Rationale
 
@@ -79,7 +78,7 @@ For this reason we tie the choice over whether to include bounds to the decision
 
 **Known-bad bounds**
 
-Excluding dependency versions which are *known** not to work is a cheap way to convey information to downstream users.
+Excluding dependency versions which are *known* not to work is a cheap way to convey information to downstream users.
 It means that if they try to use the non-working version then they will get a solver error from cabal, instead of a compilation error.
 It is common to discover this kind of version incompatibility information during development, and so this policy primarily insists that such information be recorded mechanically so that other people benefit from it.
 
