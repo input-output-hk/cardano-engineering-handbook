@@ -31,7 +31,7 @@ Typically this will mean pinning the major version.
 
 **Implied bounds**
 
-A component MAY omit bounds that it is otherwise required to have if those bounds are implied by other dependencies that the package has within the same repository.
+A component MAY omit bounds that it is otherwise required to have if those bounds are strictly implied by other dependencies that the package has within the same source repository.
 
 ### Examples
 
@@ -66,7 +66,7 @@ Then `pkg-a` should bound its dependency on `pkg-b` to `pkg-b == 2.4.*`
 
 Package `pkg-a` has both a library component and an executable component, both of which are used downstream.
 Both components depend on `pkg-b-N`, and do not work with `pkg-b-(N+1)`, and the executable depends on the library.
-In this case it is acceptable to only put a `pkg-b < N+1` bound on the library.
+In this case it is acceptable to only put a `pkg-b < N+1` bound on the library, because the executable component strictly depends on the library component of the same version, and the library component has the bound.
 
 ### Rationale
 
