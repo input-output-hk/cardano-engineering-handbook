@@ -7,6 +7,7 @@
 - [Project management](./policy/project/README.md)
 <!-- draft until reviewed -->
 - [Legal]() <!--(./policy/legal/README.md)-->
+- [Security & Responsible Disclosure](./policy/security/README.md)
 - [Build, CI and Deployment](./policy/build.md)
   - [Platform support](./policy/platforms.md)
   - [CI](./policy/ci/README.md)
