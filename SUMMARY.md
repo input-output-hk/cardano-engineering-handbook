@@ -11,6 +11,7 @@
 - [Build, CI and Deployment](./policy/build.md)
   - [Platform support](./policy/platforms.md)
   - [CI](./policy/ci/README.md)
+  - [Version Control](./policy/vcs.md)
 - [Haskell](./policy/haskell/README.md)
   - [GHC version policy](./policy/haskell/ghc-version-policy.md)
   - [Packaging](./policy/haskell/packaging/README.md)
