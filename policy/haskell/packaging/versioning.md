@@ -33,17 +33,20 @@ In addition, if it is discovered that a version of a dependency does not work wi
 **Discovering an incompatible version**
 
 The developer of package `pkg-a`, which depends on library `pkg-b`, tries to build with `pkg-b-N`. 
-This fails, so the developer either:
-1. Adds an upper bound of `pkg-b < N`, since `pkg-b-N` is known not to work; or
-2. Fixes `pkg-a` to work with `pkg-b-N`, and if this means that `pkg-a` will now no longer work with earlier versions of `pkg-b`, adds a lower bound of `pkg-b >= N`.
+This fails, so the developer should:
+
+1. Add an upper bound of `pkg-b < N`, since `pkg-b-N` is known not to work; or
+2. Fix `pkg-a` to work with `pkg-b-N`, and if this means that `pkg-a` will now no longer work with earlier versions of `pkg-b`, add a lower bound of `pkg-b >= N`.
+
+And then optionally publish a revision of some released versions of `pkg-a` to add upper bounds on `pkg-b-N`
 
 **Discovering an incompatible version for an upstream dependency**
 
 The developer of package `pkg-c`, which depends on `pkg-a-M`, tries to build with `pkg-b-N`.
 This fails when building `pkg-a`, so the developer of `pkg-c` notifies the developer of `pkg-a`. 
-The developer of `pkg-a` then:
-1. Publishes a revision `pkg-a-M` to have a bound of `pkg-b < N`; and 
-2. Adds a bound of `pkg-b < N` to the development branch of `pkg-a` if it still applies.
+One of them should then:
+1. Publish a revision `pkg-a-M` to have a bound of `pkg-b < N`; and 
+2. Add a bound of `pkg-b < N` to the development branch of `pkg-a` if it still applies.
 
 #### Rationale
 
@@ -55,7 +58,14 @@ It is common to discover this kind of version incompatibility information during
 
 A package MAY include an upper bound that excludes the next major version of a dependency, even if it is not known whether the next major version will break the package (e.g. because it has not been released yet).
 
-However, for any Cardano dependencies, a package MUST include an upper bound that excludes the next major version of the dependency pin, and SHOULD pin it to a single major version.
+#### Examples
+
+The package `pkg-b` depends on `pkg-a`. 
+`pkg-a` tends to have breaking changes in releases, so the developer of `pkg-b` decides to pin their dependency on `pkg-a` using a caret bound, which implies a (speculative) upper bound of the next major version.
+
+The package `pkg-c` depends on `pkg-b`.
+The developer of `pkg-c` really doesn't want to have to deal with bumping the upper bound on `pkg-b`, so they just leave it off.
+Note that due to the above policy about discovering incompatible versions, when a version of `pkg-b` is released that _does_ break `pkg-c`, one of the developers should publish revisions to exclude the breaking version of `pkg-b` from the released versions of `pkg-c`.
 
 #### Rationale
 
@@ -63,8 +73,8 @@ Speculative upper bounds are controversial.
 They have advantages (ensure that users get a working (if old) build plan; robustness against future changes), and disadvantages (often overly cautious; require large amounts of bound-relaxing to allow even "safe" new major versions).
 There is no consensus amongst the Cardano engineering community about which is preferable, so we simply note that either approach is acceptable.
 
-However, Cardano packages themselves typically both a) make frequent breaking changes and b) have important behavioural differences between major versions.
-For this reason we recommend that projects explicitly pin the major version of any Cardano packages that they depend on.
+The cost of speculative upper bounds is somewhat lower for Cardano packages, since they are typically well-maintained and released frequently, so bounds relaxations can be made and released in a fairly timely fashion.
+Nonetheless, they still impose costs, in particular requiring that downstream packages be released in order for new versions to be used.
 
 ### Intra-repository dependencies
 
