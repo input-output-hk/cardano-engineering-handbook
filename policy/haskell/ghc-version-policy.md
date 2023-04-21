@@ -6,7 +6,6 @@ This policy explains which versions of GHC should be used in a project.
 
 At any given time there will be a current major version of GHC, and there may be a next major version of GHC, recorded in this document.
 
-All Haskell projects SHOULD build with both the current and the next major versions of GHC.
 New projects should build with the current version.
 
 The choice of minor version is less important, but in general projects SHOULD move to later minor versions as they are released. 
@@ -38,16 +37,6 @@ The next major version of GHC is 9.2, after that GHC 9.6.
 ## Which versions of GHC are blacklisted?
 
 - 9.0.x: first minor had critical bugs. 9.0.2 was released just to avoid creating an “abandoned release” precedent, as 9.2 was released before it and should be preferred.
-
-## How does the current major version change?
-
-The process is:
-
-- Announce next major version = X
-- Three months for projects to update to build with X
-    - The process may stop during this time, if e.g. a showstopper bug in X is discovered
-    - During this time technical leadership will check on the progress regularly and assist projects which are struggling.
-- Announce current version = X; no next major version
 
 ## How does the next major version change?
 
