@@ -17,13 +17,23 @@ In particular, when adding support for a new major version, projects should alwa
 Some versions of GHC are known to be broken in a critical way and SHOULD NOT be used. 
 This may mean that projectes need to stay on an older minor version if the newer ones are blacklisted.
 
+## How do we upgrade to new versions?
+
+The DevX team will proactively work on making code compatible with new compilers, and add CI (allowed to fail) for new compilers, as ressources permit. There is low priority
+and no one should feel pressured to add compatibility into tight schedules. Due to the nature of dependencies (internal and external), this work is hard to predict, and DevX
+will slowly work away at it. Once all code is compatible with a new compiler developers will be able to use a new compier _during development_, however _production builds_ will
+still be built against our current compiler version, and the current compiler version _must_ be green in CI.
+
+We will stay on the current compiler version, until cardano-node has signoff from performance and tracing, as well as quality engineering to move to the next version.  After a
+grace persiod or 3mo afterwards, we can drop the old compiler version.
+
 ## What is the current major version of GHC?
 
 8.10.
 
 ## What is the next major version of GHC?
 
-The next major version of GHC is 9.2.
+The next major version of GHC is 9.2, after that GHC 9.6.
 
 ## Which versions of GHC are blacklisted?
 
