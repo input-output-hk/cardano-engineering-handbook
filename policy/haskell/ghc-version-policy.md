@@ -6,7 +6,6 @@ This policy explains which versions of GHC should be used in a project.
 
 At any given time there will be a current major version of GHC, and there may be a next major version of GHC, recorded in this document.
 
-All Haskell projects SHOULD build with both the current and the next major versions of GHC.
 New projects should build with the current version.
 
 The choice of minor version is less important, but in general projects SHOULD move to later minor versions as they are released. 
@@ -17,27 +16,27 @@ In particular, when adding support for a new major version, projects should alwa
 Some versions of GHC are known to be broken in a critical way and SHOULD NOT be used. 
 This may mean that projectes need to stay on an older minor version if the newer ones are blacklisted.
 
+## How do we upgrade to new versions?
+
+The DevX team will proactively work on making code compatible with new compilers, and add CI (allowed to fail) for new compilers, as ressources permit. There is low priority
+and no one should feel pressured to add compatibility into tight schedules. Due to the nature of dependencies (internal and external), this work is hard to predict, and DevX
+will slowly work away at it. Once all code is compatible with a new compiler developers will be able to use a new compier _during development_, however _production builds_ will
+still be built against our current compiler version, and the current compiler version _must_ be green in CI.
+
+We will stay on the current compiler version, until cardano-node has signoff from performance and tracing, as well as quality engineering to move to the next version.  After a
+grace persiod or 3mo afterwards, we can drop the old compiler version.
+
 ## What is the current major version of GHC?
 
 8.10.
 
 ## What is the next major version of GHC?
 
-The next major version of GHC is 9.2.
+The next major version of GHC is 9.2, after that GHC 9.6.
 
 ## Which versions of GHC are blacklisted?
 
 - 9.0.x: first minor had critical bugs. 9.0.2 was released just to avoid creating an “abandoned release” precedent, as 9.2 was released before it and should be preferred.
-
-## How does the current major version change?
-
-The process is:
-
-- Announce next major version = X
-- Three months for projects to update to build with X
-    - The process may stop during this time, if e.g. a showstopper bug in X is discovered
-    - During this time technical leadership will check on the progress regularly and assist projects which are struggling.
-- Announce current version = X; no next major version
 
 ## How does the next major version change?
 
