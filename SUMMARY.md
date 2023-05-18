@@ -15,6 +15,7 @@
 - [Haskell](./policy/haskell/README.md)
   - [GHC version policy](./policy/haskell/ghc-version-policy.md)
   - [Packaging](./policy/haskell/packaging/README.md)
+    - [Metadata](./policy/haskell/packaging/metadata.md)
     - [Distribution](./policy/haskell/packaging/distribution.md)
     - [Versioning](./policy/haskell/packaging/versioning.md)
 
