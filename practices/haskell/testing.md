@@ -9,7 +9,7 @@ Unit testing is standard practice in the industry and Cardano is no exception.
 ### Libraries
 
 - [`tasty`](https://hackage.haskell.org/package/tasty): a straightforward testing framework, with many libraries that provide additional functionality
-- [`hspec`](https://hackage.haskell.org/package/tasty): another testing framework, with a BDD-style specification style
+- [`hspec`](https://hackage.haskell.org/package/hspec): another testing framework, with a BDD-style specification style
 
 ## Property-based testing
 
